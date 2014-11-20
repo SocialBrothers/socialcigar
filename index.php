@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Social Brothers plugin
+ * Plugin Name: Social (Brothers) Band plugin
  * Plugin URI: http://socialbrothers.nl
- * Description: custom codes
+ * Description: A custom full width Social bar
  * Version: 1.0
  * Author: Andrew Ho
  * Author URI: http://socialbrothers.nl
