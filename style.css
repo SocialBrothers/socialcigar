@@ -1,0 +1,121 @@
+@media screen and (min-width: 900px) {
+	.sbbandcol1 {
+	width: 50%;
+	height: 500px;
+	display: block;
+	float: left;
+	overflow:hidden;	
+	}
+	
+	.sbbandcol2 {
+	width: 50%;
+	display: block;
+	float: left;
+	height: 500px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.sbbandcol1 {
+	width: 100%;
+	height: 500px;
+	display: block;
+	float: left;
+	overflow:hidden;	
+	}
+	
+	.sbbandcol2 {
+	width: 100%;
+	display: block;
+	float: left;
+	height: 500px;
+	}
+}
+
+.sbbandcol11 {
+width: 50%;
+display: block;
+float: left;
+overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+	
+}
+.sbcolboven {
+width: 100%;
+height: 250px;
+display: block;
+float: left;	
+overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+
+}
+.sbcolonder {
+width: 100%;
+height: 50%;
+display: block;
+float: left;	
+overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+
+}
+.sbbandcol12 {
+width: 50%;
+height: 500px;
+display: block;
+float: left;
+overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+
+}
+.sbbandcollinks {
+width: 50%;
+height: 250px;
+display: block;
+float: left;
+overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+
+}
+.sbbandcolrechts {
+	overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+
+}
+.sbcolbovenderde {
+width: 100%;
+height: 300px;
+display: block;
+float: left;	
+overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+
+}
+.sbcolonderderde {
+width: 100%;
+height: 200px;
+display: block;
+float: left;	
+overflow:hidden; background-position: center;  background-repeat: no-repeat; background-size:cover;
+
+
+
+}
+.sbcolboven .redO{ 
+	position:relative; 
+	top:0px; width: 100%;
+height: 100%; 
+background:rgba(244, 122, 33, 0.7); 
+opacity:0; 
+-webkit-transition: opacity .25s ease;
+-moz-transition: opacity .25s ease;
+color: white;
+padding: 10px; 
+} 
+.sbcolboven:hover .redO { opacity:1.0; } 
+
+.sbcolonderderde .redO{ 
+	position:relative; 
+	top:0px; width: 100%;
+height: 100%; 
+background:rgba(244, 122, 33, 0.7); 
+ opacity:0; 
+-webkit-transition: opacity .25s ease;
+-moz-transition: opacity .25s ease;
+color: white;
+padding: 10px; 
+} 
+.sbcolonderderde:hover .redO { opacity:1.0; } 
+
+
