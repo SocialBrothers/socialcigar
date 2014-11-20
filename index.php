@@ -12,5 +12,5 @@
 
 add_action( 'wp_enqueue_scripts', 'my_plugin_enqueue' );
 function my_plugin_enqueue() {
-	 wp_enqueue_style( 'footertransparant',plugins_url('/social_brothers_plugin/socialband/style.css'), '.css', NULL, NULL, 'all' );
+	 wp_enqueue_style( 'footertransparant',plugins_url('/social_brothers_plugin/style.css'), '.css', NULL, NULL, 'all' );
 }
