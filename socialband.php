@@ -15,6 +15,22 @@ function fetchUrl($url){
  return $feedData;
 
 }
+function GetBigImage($ID){
+
+ $ch = curl_init();
+ curl_setopt($ch, CURLOPT_URL, $url);
+ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+ curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+ // You may need to add the line below
+ // curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);
+
+ $feedData = curl_exec($ch);
+ curl_close($ch); 
+
+ return $feedData;
+
+}
+
 
 
 add_action('admin_menu', 'sb_plugin_setup_menu');
@@ -34,7 +50,7 @@ function registersbsettingssocial() {
 	register_setting( 'baw-settings-group', 'exclude1' );
 		register_setting( 'baw-settings-group', 'exclude2' );
 		register_setting( 'baw-settings-group', 'fbpageid' );
-	
+		register_setting( 'baw-settings-group', 'urltoimage' );
 }
 
  
@@ -83,6 +99,11 @@ function init_sbsocial(){
           <tr valign="top">
         <th scope="row">Exclude url 2</th>
         <td><input style="width: 330px;"  type="text" name="exclude2" value="<?php echo esc_attr( get_option('exclude2') ); ?>" /></td>
+        </tr>
+       
+         <tr valign="top">
+        <th scope="row">URL to cover</th>
+        <td><input style="width: 330px;"  type="text" name="urltoimage" value="<?php echo esc_attr( get_option('urltoimage') ); ?>" /></td>
         </tr>
         
     </table>
@@ -209,16 +230,31 @@ foreach ($data as $key => $value) {
         	
          <!-- kolom 1-1 -->
          <div class="sbbandcol12">
-         		<div class="sbcolonderderde">
          		
-         		 <div onclick="window.open('<?php echo $instaurlarray[3] ?>');" class="sbbandcollinks" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[3]; ?>')">
+     			<div  class="sbcolonderderde" onclick="window.open('<?php echo 'http://facebook.com/'. $profile_id ?>');" style="cursor:pointer; background-image: url('<?php echo esc_attr( get_option('urltoimage')); ?>')">
+				</div>
+       			
+       			
+       			<div class="sbcolbovenderde">
+	       			
+	       			<div class="kwarthelf">
+	       				<div onclick="window.open('<?php echo $instaurlarray[5] ?>');" class="tweekwart" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[5]; ?>')">
+	         			</div>
+	         			<div onclick="window.open('<?php echo $instaurlarray[5] ?>');" class="tweekwart" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[5]; ?>')">
+	         			</div>
+	         		</div>
+	         		<div class="kwarthelf">
+	       				<div onclick="window.open('<?php echo $instaurlarray[5] ?>');" class="tweekwart" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[5]; ?>')">
+	         			</div>
+	         			<div onclick="window.open('<?php echo $instaurlarray[5] ?>');" class="tweekwart" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[5]; ?>')">
+	         			</div>
+	         		</div>	
+	         		<!-- <div class="kwarthelf">
+	         			 <div onclick="window.open('<?php echo $instaurlarray[3] ?>');" class="sbbandcollinks" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[3]; ?>')">
 						</div>
 						<div onclick="window.open('<?php echo $instaurlarray[4] ?>');" class="sbbandcollinks" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[4]; ?>')">
 						</div>
-         		
-         			</div>
-       			
-       				<div onclick="window.open('<?php echo $instaurlarray[5] ?>');" class="sbcolbovenderde" style="cursor:pointer; background-image: url('<?php echo $instafotourlarray[5]; ?>')">
+	         		</div>	-->
          		</div>
          	
         	</div>
